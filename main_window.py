@@ -5,7 +5,6 @@ from Pesel_Faker import Pesel
 def create_pesel():
     pesel_entry.configure(text=f'{Pesel.pesel_final}')
 
-
 # tworzę główne okno
 root = tkinter.Tk()
 root.columnconfigure(3)
