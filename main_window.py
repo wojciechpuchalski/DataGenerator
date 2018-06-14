@@ -2,8 +2,6 @@ from tkinter import *
 import tkinter
 from Pesel_Faker import Pesel
 
-
-
 def create_pesel():
     pesel_entry.configure(text=f'{Pesel.pesel_final}')
 
