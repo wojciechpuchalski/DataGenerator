@@ -1,9 +1,9 @@
 from tkinter import *
 import tkinter
-from Pesel_Faker import Pesel
+from Pesel_Faker import pesel
 
 def create_pesel():
-    pesel_entry.configure(text=f'{Pesel.pesel_final}')
+    pesel_entry.configure(text=f'{pesel()}')
 
 # tworzę główne okno
 root = tkinter.Tk()
