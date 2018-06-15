@@ -1,9 +1,13 @@
 from tkinter import *
 import tkinter
 from Pesel_Faker import pesel
+from NIP_Faker import nip
 
 def create_pesel():
     pesel_entry.configure(text=f'{pesel()}')
+
+def create_nip():
+    pesel_entry.configure(text=f'{nip()}')
 
 # tworzę główne okno
 root = tkinter.Tk()
@@ -37,7 +41,7 @@ regon_entry.configure(bg='yellow', width=13, height=1, relief=SUNKEN)
 pesel_button = tkinter.Button(master=root, text='Generuj!', command=lambda: create_pesel())
 pesel_button.grid(row=0, column=3, columnspan=2)
 
-nip_button = tkinter.Button(master=root, text='Generuj!')
+nip_button = tkinter.Button(master=root, text='Generuj!', command=lambda: create_nip())
 nip_button.grid(row=1, column=3, columnspan=2)
 
 regon_button = tkinter.Button(master=root, text='Generuj!')

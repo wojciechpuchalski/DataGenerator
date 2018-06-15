@@ -34,9 +34,7 @@ def pesel():
             i = str(i)
             result[n] = i[1]
     results = list(map(int, result))
-
     k = sum(results)
-
     k = str(k)
     num = k[1]
 
