@@ -1,0 +1,1 @@
+# Trzeba pobrac plik z prefiksami oddzialow z: https://ewib.nbp.pl/faces/pages/daneDoPobrania.xhtml
