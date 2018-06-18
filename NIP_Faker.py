@@ -19,5 +19,9 @@ def nip():
     result = [a * b for a, b in zip(control_sum, balance_list)]
     list(map(int, result))
     modulo = sum(result) % 11
+    if modulo >= 10:
+        modulo =0
+    else:
+        modulo = modulo
     nip_final = str(random_number) + str(modulo)
     return nip_final

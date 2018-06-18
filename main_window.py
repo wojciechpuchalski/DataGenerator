@@ -2,6 +2,7 @@ from tkinter import *
 import tkinter
 from Pesel_Faker import pesel
 from NIP_Faker import nip
+from REGON_Faker import regon
 
 
 def create_pesel():
@@ -9,6 +10,9 @@ def create_pesel():
 
 def create_nip():
     nip_entry.configure(text=f'{nip()}')
+
+def create_regon():
+    regon_entry.configure(text=f'{regon()}')
 
 def copy_text_to_clipboard(new):
     root.clipboard_clear()  # clear clipboard contents
@@ -50,7 +54,7 @@ pesel_button.grid(row=0, column=3, columnspan=2)
 nip_button = tkinter.Button(master=root, text='Generuj!', command=lambda: create_nip())
 nip_button.grid(row=1, column=3, columnspan=2)
 
-regon_button = tkinter.Button(master=root, text='Generuj!')
+regon_button = tkinter.Button(master=root, text='Generuj!', command=lambda: create_regon())
 regon_button.grid(row=2, column=3, columnspan=2)
 
 
