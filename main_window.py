@@ -16,7 +16,7 @@ def create_regon():
 
 def copy_to_clipboard(new):
     root.clipboard_clear()  # clear clipboard contents
-    root.clipboard_get()
+    root.clipboard_append(new)  # append new value to clipbaord
 
 # tworzę główne okno
 root = tkinter.Tk()
@@ -58,7 +58,7 @@ regon_button.grid(row=2, column=3, columnspan=2)
 
 
 # kopiuj do schowka
-pesel_copy = tkinter.Button(master=root, text='Kopiuj do schowka', command=lambda: copy_to_clipboard(new=pesel_entry))
+pesel_copy = tkinter.Button(master=root, text='Kopiuj do schowka', command=lambda: copy_to_clipboard(new=create_pesel))
 pesel_copy.grid(row=0, column=5, columnspan=2)
 
 nip_copy = tkinter.Button(master=root, text='Kopiuj do schowka', command=lambda: copy_to_clipboard(new=nip_entry))
