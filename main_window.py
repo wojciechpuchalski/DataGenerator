@@ -7,7 +7,6 @@ from REGON_Faker import regon
 
 def create_pesel():
     pesel_entry.configure(text=f'{pesel()}')
-    print(str(pesel_entry))
 
 def create_nip():
     nip_entry.configure(text=f'{nip()}')
@@ -59,13 +58,13 @@ regon_button.grid(row=2, column=3, columnspan=2)
 
 
 # kopiuj do schowka
-pesel_copy = tkinter.Button(master=root, text='Kopiuj do schowka', command=lambda: copy_text_to_clipboard(new=pesel_entry))
+pesel_copy = tkinter.Button(master=root, text='Kopiuj do schowka', command=lambda: copy_text_to_clipboard(new=pesel_entry.cget('text')))
 pesel_copy.grid(row=0, column=5, columnspan=2)
 
-nip_copy = tkinter.Button(master=root, text='Kopiuj do schowka', command=lambda: copy_text_to_clipboard(new=nip_entry))
+nip_copy = tkinter.Button(master=root, text='Kopiuj do schowka', command=lambda: copy_text_to_clipboard(new=nip_entry.cget('text')))
 nip_copy.grid(row=1, column=5, columnspan=2)
 
-regon_copy = tkinter.Button(master=root, text='Kopiuj do schowka', command=lambda: copy_text_to_clipboard(new=regon_entry))
+regon_copy = tkinter.Button(master=root, text='Kopiuj do schowka', command=lambda: copy_text_to_clipboard(new=regon_entry.cget('text')))
 regon_copy.grid(row=2, column=5, columnspan=2)
 
 
